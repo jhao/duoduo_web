@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多多资源协同平台 - 会员工作台</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h3>会员中心</h3>
+        <a class="active" href="#member">会员信息</a>
+        <a href="#events">活动会议</a>
+        <a href="#resources">资源市场</a>
+        <a href="#products">产品服务市场</a>
+        <a href="#messages">消息与通知</a>
+        <a href="#analytics">访问与业绩</a>
+      </aside>
+      <main class="content-area">
+        <section class="content-card" id="member">
+          <h2>会员信息维护</h2>
+          <p>
+            完整的会员信息将帮助平台精准推荐合作机会，提升资源连接效率。请维护企业介绍、资源渠道、服务能力与合作偏好。
+          </p>
+          <div class="form-grid">
+            <div>
+              <label for="company-name">企业名称</label>
+              <input id="company-name" placeholder="请输入企业名称" />
+            </div>
+            <div>
+              <label for="member-role">会员角色</label>
+              <select id="member-role">
+                <option>渠道资源方</option>
+                <option>产品/服务提供方</option>
+                <option>产业资本</option>
+                <option>政府/园区</option>
+              </select>
+            </div>
+            <div>
+              <label for="region">期望服务地区</label>
+              <input id="region" placeholder="如：华东、粤港澳、海外" />
+            </div>
+            <div>
+              <label for="industry">期望服务行业</label>
+              <input id="industry" placeholder="如：医疗、先进制造、能源" />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="resource-intro">资源渠道介绍</label>
+              <textarea id="resource-intro" placeholder="描述可触达的领导层级、业务部门、渠道资源等"></textarea>
+            </div>
+            <div>
+              <label for="capability">产品或服务能力介绍</label>
+              <textarea id="capability" placeholder="列举核心产品、服务团队、过往项目成果"></textarea>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="cooperation">希望合作方式</label>
+              <textarea id="cooperation" placeholder="如：联合投标、渠道代理、联合投资、项目孵化"></textarea>
+            </div>
+            <div>
+              <label for="company-profile">企业介绍</label>
+              <textarea id="company-profile" placeholder="企业概况、规模、核心团队、核心案例"></textarea>
+            </div>
+          </div>
+          <div>
+            <label for="history">已有合作清单</label>
+            <textarea id="history" placeholder="列举与平台内会员已达成的合作或项目"></textarea>
+          </div>
+          <div>
+            <label for="activities">已参与活动</label>
+            <textarea id="activities" placeholder="填写已参与活动名称、日期与成果"></textarea>
+          </div>
+          <button class="button primary" type="button">保存会员信息</button>
+        </section>
+
+        <section class="content-card" id="events">
+          <h2>活动会议管理</h2>
+          <p>发起或参与平台活动，支持多审批节点、预算控制、费用设置与流程归档。</p>
+          <div class="form-grid">
+            <div>
+              <label for="event-title">会议主题</label>
+              <input id="event-title" placeholder="请输入会议或活动名称" />
+            </div>
+            <div>
+              <label for="event-attendees">人数期望</label>
+              <input id="event-attendees" placeholder="如：50 人" />
+            </div>
+            <div>
+              <label for="event-venues">场地诉求</label>
+              <input id="event-venues" placeholder="如：酒店宴会厅/园区会议中心" />
+            </div>
+            <div>
+              <label for="event-hosts">拟邀请人员</label>
+              <input id="event-hosts" placeholder="行业专家、政府领导、企业高管" />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="event-dates">时间窗口</label>
+              <textarea id="event-dates" placeholder="可填写多个备选时间，格式：2024/05/18 上午"></textarea>
+            </div>
+            <div>
+              <label for="event-hospitality">会议招待要求</label>
+              <textarea id="event-hospitality" placeholder="住宿、接待、礼品需求"></textarea>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="event-dining">会议餐食要求</label>
+              <textarea id="event-dining" placeholder="如：商务简餐、自助晚宴、茶歇设置"></textarea>
+            </div>
+            <div>
+              <label for="event-transport">会议用车需求</label>
+              <textarea id="event-transport" placeholder="如：嘉宾接送、商务大巴、专车"></textarea>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="event-budget">预算与费用</label>
+              <input id="event-budget" placeholder="预算金额，是否设置参会费用" />
+            </div>
+            <div>
+              <label for="event-approval">审批节点</label>
+              <textarea id="event-approval" placeholder="填写管理员设置的审批环节"></textarea>
+            </div>
+          </div>
+          <button class="button primary" type="button">提交活动审批</button>
+
+          <table class="table">
+            <caption>活动立项进度</caption>
+            <thead>
+              <tr>
+                <th>会议主题</th>
+                <th>状态</th>
+                <th>预算</th>
+                <th>审批节点</th>
+                <th>参会费用</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024 产业合作圆桌</td>
+                <td><span class="status pending">审批中</span></td>
+                <td>¥80,000</td>
+                <td>业务审批 → 财务审核 → 管理员确认</td>
+                <td>VIP ¥1,500</td>
+              </tr>
+              <tr>
+                <td>长三角医疗项目对接会</td>
+                <td><span class="status success">已发布</span></td>
+                <td>¥120,000</td>
+                <td>业务审批 → 会议执行 → 档案归档</td>
+                <td>免费</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>活动归档提醒</h4>
+              <p>请在会议结束后 3 个工作日内上传活动过程资料、成果总结与参会名单。</p>
+            </div>
+            <div class="timeline-item">
+              <h4>会议参与记录</h4>
+              <p>近期已参与「数字园区招商研讨会」，请更新跟进结果。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-card" id="resources">
+          <h2>资源市场</h2>
+          <p>展示可共享的市场资源，并通过画像维度评估资源可转化率。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>资源名称</th>
+                <th>可触达领导等级</th>
+                <th>业务部门</th>
+                <th>行业方向</th>
+                <th>成功案例</th>
+                <th>回款情况</th>
+                <th>画像标签</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>某省卫健委核心渠道</td>
+                <td>厅局级</td>
+                <td>医政医管</td>
+                <td>医疗健康</td>
+                <td>智慧医院建设</td>
+                <td>近 12 个月回款 500 万</td>
+                <td>
+                  <div class="chip-group">
+                    <span class="chip">高转化</span>
+                    <span class="chip">密切合作</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>能源央企渠道</td>
+                <td>副总裁级</td>
+                <td>新能源投资部</td>
+                <td>双碳能源</td>
+                <td>分布式能源项目</td>
+                <td>在签订单 ¥30,000,000</td>
+                <td>
+                  <div class="chip-group">
+                    <span class="chip">持续跟进</span>
+                    <span class="chip">行业重点</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>大型商超连锁渠道</td>
+                <td>董事会</td>
+                <td>采购中心</td>
+                <td>消费零售</td>
+                <td>新品引入成功案例</td>
+                <td>回款周期 45 天</td>
+                <td>
+                  <div class="chip-group">
+                    <span class="chip">中高潜力</span>
+                    <span class="chip">中度合作</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="content-card" id="products">
+          <h2>产品服务市场</h2>
+          <p>提交企业能力并完成供应商画像，支持会员按需选择合适的合作伙伴。</p>
+          <div class="form-grid">
+            <div>
+              <label for="product-name">产品/服务名称</label>
+              <input id="product-name" placeholder="请输入产品或服务名称" />
+            </div>
+            <div>
+              <label for="supply-scope">可控上下游企业</label>
+              <input id="supply-scope" placeholder="列出可协同的上下游企业" />
+            </div>
+            <div>
+              <label for="market-expect">期望市场需求</label>
+              <input id="market-expect" placeholder="如：政府数字化、智慧园区" />
+            </div>
+            <div>
+              <label for="performance">企业业绩概况</label>
+              <input id="performance" placeholder="如：年度营收、核心客户" />
+            </div>
+          </div>
+          <div>
+            <label for="service-detail">服务能力说明</label>
+            <textarea id="service-detail" placeholder="描述实施能力、服务团队、交付模式"></textarea>
+          </div>
+          <button class="button primary" type="button">提交到供应商池</button>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>供应商</th>
+                <th>产品能力</th>
+                <th>行业经验</th>
+                <th>服务地域</th>
+                <th>画像标签</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>智联科技</td>
+                <td>智慧园区平台、物联网集成</td>
+                <td>园区数字化 12 年经验</td>
+                <td>全国</td>
+                <td>
+                  <div class="chip-group">
+                    <span class="chip">明星供应商</span>
+                    <span class="chip">交付稳定</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>合创咨询</td>
+                <td>产业策略规划、招商服务</td>
+                <td>政府园区 8 年项目经验</td>
+                <td>华东 / 华南</td>
+                <td>
+                  <div class="chip-group">
+                    <span class="chip">高口碑</span>
+                    <span class="chip">快速响应</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="content-card" id="messages">
+          <h2>消息与通知</h2>
+          <p>平台通知将同步发送至微信公众平台，支持成员之间直接交流。</p>
+          <div class="message-list">
+            <div class="message-item">
+              <strong>管理员</strong>
+              <span>2024-04-16 09:30</span>
+              <p>「长三角医疗项目对接会」已通过终审，欢迎邀请合作伙伴报名参加。</p>
+            </div>
+            <div class="message-item">
+              <strong>系统通知</strong>
+              <span>2024-04-15 16:45</span>
+              <p>您的资源「能源央企渠道」被会员 XXX 收藏，建议尽快发起沟通。</p>
+            </div>
+            <div class="message-item">
+              <strong>智联科技</strong>
+              <span>2024-04-14 11:05</span>
+              <p>已收到贵司供应商合作申请，期待进一步交流细节。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-card" id="analytics">
+          <h2>访问记录与业绩提交</h2>
+          <p>平台将记录所有资源、供应商访问行为，并支持业绩交易申报以获得更高曝光。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>访问对象</th>
+                <th>类型</th>
+                <th>时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>能源央企渠道</td>
+                <td>资源</td>
+                <td>2024-04-16 08:42</td>
+                <td>查看详情</td>
+              </tr>
+              <tr>
+                <td>智联科技</td>
+                <td>供应商</td>
+                <td>2024-04-15 15:28</td>
+                <td>收藏</td>
+              </tr>
+              <tr>
+                <td>长三角医疗项目对接会</td>
+                <td>活动</td>
+                <td>2024-04-15 09:05</td>
+                <td>报名</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+            <label for="achievement">业绩交易申报</label>
+            <textarea
+              id="achievement"
+              placeholder="填写业绩名称、交易金额、合作方、成交时间，并上传证明材料"
+            ></textarea>
+          </div>
+          <button class="button primary" type="button">提交业绩获取曝光</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
