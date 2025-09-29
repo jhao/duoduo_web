@@ -459,6 +459,10 @@ nav {
   align-self: start;
 }
 
+.sidebar.open {
+  transform: translateX(0);
+}
+
 .sidebar h3 {
   margin: 0 0 8px;
 }
@@ -475,6 +479,22 @@ nav {
 .sidebar a:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 25, 45, 0.38);
+  backdrop-filter: blur(2px);
+  z-index: 65;
+}
+
+.sidebar-backdrop[hidden] {
+  display: none !important;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .main-column {
@@ -523,6 +543,34 @@ nav {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(71, 51, 168, 0.25);
+  background: #fff;
+  color: #3a2a8c;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 12px;
+  box-shadow: 0 12px 28px rgba(34, 23, 86, 0.12);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid rgba(83, 68, 180, 0.4);
+  outline-offset: 4px;
 }
 
 .icon-button {
@@ -1297,23 +1345,86 @@ textarea:focus {
 
   .dashboard {
     grid-template-columns: 1fr;
-    padding: 32px 24px;
+    padding: 24px 20px 32px;
+    position: relative;
   }
 
   .sidebar {
-    flex-direction: row;
-    overflow-x: auto;
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    max-width: 78vw;
+    transform: translateX(-110%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 24px 48px rgba(23, 25, 45, 0.18);
+    padding: 88px 24px 32px;
+    z-index: 80;
+    overflow-y: auto;
+  }
+
+  .sidebar h3 {
+    margin-top: 0;
+  }
+
+  .sidebar a {
+    padding: 14px 20px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .topbar {
-    position: static;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .topbar-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 100%;
+  }
+
+  .topbar-subtitle {
+    flex-basis: 100%;
+    font-size: 0.82rem;
+  }
+
+  .topbar-title {
+    font-size: 1.1rem;
+  }
+
+  .topbar-actions {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .icon-button,
+  .avatar {
+    width: 36px;
+    height: 36px;
   }
 
   .gallery-content,
   .member-summary,
   .performance-grid {
     grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-card {
+    padding: 24px;
   }
 
   .drawer {

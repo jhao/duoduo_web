@@ -3,6 +3,82 @@
   const messagePanel = document.getElementById('messagePanel');
   const userToggle = document.getElementById('userToggle');
   const userMenu = document.getElementById('userMenu');
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebarNav = document.getElementById('sidebarNav');
+  const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+  const mobileMediaQuery = window.matchMedia('(max-width: 900px)');
+
+  function setSidebarVisibility(isVisible) {
+    if (!sidebarNav) return;
+    sidebarNav.classList.toggle('open', isVisible);
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', isVisible.toString());
+    }
+    if (sidebarBackdrop) {
+      if (isVisible) {
+        sidebarBackdrop.hidden = false;
+      } else {
+        sidebarBackdrop.hidden = true;
+      }
+    }
+    document.body.classList.toggle('menu-open', isVisible);
+  }
+
+  function closeSidebar({ focusToggle = false } = {}) {
+    if (!sidebarNav) return;
+    setSidebarVisibility(false);
+    if (focusToggle && menuToggle && mobileMediaQuery.matches) {
+      menuToggle.focus();
+    }
+  }
+
+  function openSidebar() {
+    if (!sidebarNav) return;
+    setSidebarVisibility(true);
+  }
+
+  function resetSidebarForDesktop() {
+    if (!sidebarNav) return;
+    if (!mobileMediaQuery.matches) {
+      closeSidebar();
+    }
+  }
+
+  if (menuToggle && sidebarNav) {
+    menuToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const willOpen = !sidebarNav.classList.contains('open');
+      if (willOpen) {
+        openSidebar();
+        closeMessagePanel();
+        closeUserMenu();
+      } else {
+        closeSidebar();
+      }
+    });
+  }
+
+  if (sidebarBackdrop) {
+    sidebarBackdrop.addEventListener('click', () => closeSidebar({ focusToggle: true }));
+  }
+
+  if (sidebarNav) {
+    sidebarNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (mobileMediaQuery.matches) {
+          closeSidebar();
+        }
+      });
+    });
+  }
+
+  if (mobileMediaQuery.addEventListener) {
+    mobileMediaQuery.addEventListener('change', resetSidebarForDesktop);
+  } else if (mobileMediaQuery.addListener) {
+    mobileMediaQuery.addListener(resetSidebarForDesktop);
+  }
+
+  resetSidebarForDesktop();
 
   function closeMessagePanel() {
     if (messagePanel) {
@@ -59,6 +135,20 @@
       if (!userMenu.contains(event.target) && !userToggle.contains(event.target)) {
         closeUserMenu();
       }
+    }
+
+    if (sidebarNav && menuToggle && sidebarNav.classList.contains('open')) {
+      if (!sidebarNav.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeSidebar();
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMessagePanel();
+      closeUserMenu();
+      closeSidebar({ focusToggle: true });
     }
   });
 
