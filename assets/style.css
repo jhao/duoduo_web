@@ -61,6 +61,7 @@ header::after {
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, rgba(78, 45, 142, 0.6), rgba(0, 0, 0, 0.4));
+  pointer-events: none;
 }
 
 nav {
@@ -520,6 +521,10 @@ body.menu-open {
   right: 0;
   width: 100%;
   z-index: 40;
+}
+
+.topbar::after {
+  content: none;
 }
 
 .topbar-left {
