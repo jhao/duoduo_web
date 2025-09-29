@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多多资源协同平台 - 产品服务市场</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-title">产品服务市场</span>
+        <span class="topbar-subtitle">组合选型优秀供应商</span>
+      </div>
+      <div class="topbar-actions">
+        <button
+          class="icon-button"
+          id="messageToggle"
+          aria-expanded="false"
+          aria-controls="messagePanel"
+          aria-haspopup="true"
+        >
+          <span aria-hidden="true">🔔</span>
+          <span class="sr-only">查看最新消息</span>
+        </button>
+        <button class="icon-button" aria-label="快速新建">
+          <span aria-hidden="true">➕</span>
+        </button>
+        <div class="topbar-user">
+          <button
+            class="user-toggle"
+            id="userToggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="avatar" aria-hidden="true">SL</div>
+            <div class="user-meta">
+              <strong>王晓丽</strong>
+              <div class="topbar-subtitle">超级管理员</div>
+            </div>
+            <span class="user-caret" aria-hidden="true">▾</span>
+          </button>
+          <div
+            class="user-menu"
+            id="userMenu"
+            role="menu"
+            aria-label="用户操作"
+            aria-hidden="true"
+          >
+            <a href="#" role="menuitem">会员服务</a>
+            <button type="button" role="menuitem">退出登录</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="topbar-dropdown"
+        id="messagePanel"
+        role="region"
+        aria-label="最新消息"
+        aria-hidden="true"
+      >
+        <h4>最新消息</h4>
+        <div class="message-item">
+          <strong>平台助理</strong>
+          <span>今天 09:32</span>
+          <p>「长三角医疗项目对接会」报名即将截止，已为您保留 2 个嘉宾席位。</p>
+        </div>
+        <div class="message-item">
+          <strong>系统通知</strong>
+          <span>昨天 18:05</span>
+          <p>资源「能源央企渠道」获得 4 次收藏，建议跟进意向会员。</p>
+        </div>
+        <div class="message-item">
+          <strong>智联科技</strong>
+          <span>昨天 15:21</span>
+          <p>感谢提交联合解决方案，我们已安排技术同事与您对接细节。</p>
+        </div>
+      </div>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h3>会员中心</h3>
+        <a href="dashboard.html">会员信息展示</a>
+        <a href="events.html">会议活动</a>
+        <a href="resources.html">资源市场</a>
+        <a class="active" href="products.html">产品服务市场</a>
+        <a href="performance.html">业绩提交</a>
+        <a href="visits.html">访问记录</a>
+      </aside>
+      <div class="main-column">
+        <main class="content-area">
+          <section class="content-card" id="products">
+            <div class="member-header">
+              <div>
+                <h2>产品服务市场 · 组合选型</h2>
+                <p>
+                  供应商画像、项目经验与交付能力一目了然，可按行业、能力、评分、交付区域等条件组合筛选，快速构建解决方案。
+                </p>
+              </div>
+            </div>
+            <div class="filter-panel">
+              <div class="filter-row">
+                <select aria-label="服务类型筛选">
+                  <option>全部服务类型</option>
+                  <option>数字化平台</option>
+                  <option>咨询规划</option>
+                  <option>教育培训</option>
+                </select>
+                <select aria-label="交付能力筛选">
+                  <option>全部交付等级</option>
+                  <option>五星交付</option>
+                  <option>四星交付</option>
+                  <option>成长供应商</option>
+                </select>
+                <select aria-label="服务区域筛选">
+                  <option>全部区域</option>
+                  <option>全国</option>
+                  <option>华东</option>
+                  <option>粤港澳大湾区</option>
+                </select>
+                <input type="search" placeholder="搜索供应商/产品" aria-label="搜索供应商" />
+              </div>
+              <div class="filter-tags">
+                <span class="chip">明星供应商</span>
+                <span class="chip">创新方案</span>
+                <span class="chip">交付口碑 4.5+</span>
+                <span class="chip">教育培训</span>
+              </div>
+            </div>
+            <div class="market-grid">
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>智联科技</h3>
+                    <p>智慧园区平台、物联网集成、数据中台建设。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.8</span>
+                    <small>交付等级：五星</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：园区数字化 12 年 · 50+ 成功案例</li>
+                  <li>服务地域：全国 · 支持海外远程交付</li>
+                  <li>优势：端到端实施、物联网硬件生态、持续运维</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="智联科技"
+                    data-summary="智慧园区与工业互联网领域的核心供应商。"
+                    data-tags="数字化平台;五星交付;全国"
+                    data-points="典型案例：张江智慧园区;团队规模：技术顾问 120+;对比优势：数据中台 + IoT 一体化"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">加入方案包</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>合创咨询</h3>
+                    <p>产业策略规划、招商服务、园区运营顾问。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.6</span>
+                    <small>交付等级：四星</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：政府园区 8 年 · 30+ 项目实战</li>
+                  <li>服务地域：华东 / 华南</li>
+                  <li>优势：策略规划、招商策略、联合路演执行</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="合创咨询"
+                    data-summary="专注政府园区的招商咨询伙伴，擅长策略 + 执行。"
+                    data-tags="咨询规划;快速响应;园区运营"
+                    data-points="代表案例：长三角科创园;顾问团队：资深合伙人 6 名;服务亮点：招商策略工作坊"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">预约顾问</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>未来教育实验室</h3>
+                    <p>企业大学共建、产业人才培养、数字化学习平台。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.5</span>
+                    <small>交付等级：成长</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：教育与培训 10 年 · 服务企业 80+</li>
+                  <li>服务地域：全国 · 支持混合式培训</li>
+                  <li>优势：定制课程、人才画像评估、学习运营</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="未来教育实验室"
+                    data-summary="提供企业教育培训一体化解决方案。"
+                    data-tags="教育培训;人才发展;混合学习"
+                    data-points="核心产品：企业大学加速器;成功案例：新能源企业成长营;服务亮点：在线 + 线下混合运营"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">加入对比</button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <aside class="drawer" id="detailDrawer" aria-hidden="true">
+      <div class="event-actions" style="justify-content: flex-end;">
+        <button class="ghost-button" id="closeDrawer" type="button">关闭</button>
+      </div>
+      <h3 id="drawerTitle">画像详情</h3>
+      <p id="drawerSummary"></p>
+      <div class="chip-group" id="drawerTags"></div>
+      <ul id="drawerList"></ul>
+      <div class="event-actions">
+        <button class="button primary" type="button">发起合作</button>
+        <button class="ghost-button" type="button">收藏资源</button>
+      </div>
+    </aside>
+
+    <script src="assets/dashboard.js"></script>
+  </body>
+</html>

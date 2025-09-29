@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多多资源协同平台 - 访问记录</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-title">访问记录</span>
+        <span class="topbar-subtitle">洞察团队访问行为，助力精准跟进</span>
+      </div>
+      <div class="topbar-actions">
+        <button
+          class="icon-button"
+          id="messageToggle"
+          aria-expanded="false"
+          aria-controls="messagePanel"
+          aria-haspopup="true"
+        >
+          <span aria-hidden="true">🔔</span>
+          <span class="sr-only">查看最新消息</span>
+        </button>
+        <button class="icon-button" aria-label="快速新建">
+          <span aria-hidden="true">➕</span>
+        </button>
+        <div class="topbar-user">
+          <button
+            class="user-toggle"
+            id="userToggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="avatar" aria-hidden="true">SL</div>
+            <div class="user-meta">
+              <strong>王晓丽</strong>
+              <div class="topbar-subtitle">超级管理员</div>
+            </div>
+            <span class="user-caret" aria-hidden="true">▾</span>
+          </button>
+          <div
+            class="user-menu"
+            id="userMenu"
+            role="menu"
+            aria-label="用户操作"
+            aria-hidden="true"
+          >
+            <a href="#" role="menuitem">会员服务</a>
+            <button type="button" role="menuitem">退出登录</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="topbar-dropdown"
+        id="messagePanel"
+        role="region"
+        aria-label="最新消息"
+        aria-hidden="true"
+      >
+        <h4>最新消息</h4>
+        <div class="message-item">
+          <strong>平台助理</strong>
+          <span>今天 09:32</span>
+          <p>「长三角医疗项目对接会」报名即将截止，已为您保留 2 个嘉宾席位。</p>
+        </div>
+        <div class="message-item">
+          <strong>系统通知</strong>
+          <span>昨天 18:05</span>
+          <p>资源「能源央企渠道」获得 4 次收藏，建议跟进意向会员。</p>
+        </div>
+        <div class="message-item">
+          <strong>智联科技</strong>
+          <span>昨天 15:21</span>
+          <p>感谢提交联合解决方案，我们已安排技术同事与您对接细节。</p>
+        </div>
+      </div>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h3>会员中心</h3>
+        <a href="dashboard.html">会员信息展示</a>
+        <a href="events.html">会议活动</a>
+        <a href="resources.html">资源市场</a>
+        <a href="products.html">产品服务市场</a>
+        <a href="performance.html">业绩提交</a>
+        <a class="active" href="visits.html">访问记录</a>
+      </aside>
+      <div class="main-column">
+        <main class="content-area">
+          <section class="content-card" id="visits">
+            <div class="member-header">
+              <div>
+                <h2>访问记录</h2>
+                <p>
+                  查看团队成员对资源、供应商、活动的访问行为，支持多条件筛选，便于精准跟进与业绩归因。
+                </p>
+              </div>
+            </div>
+            <div class="visit-filters">
+              <select aria-label="访问类型">
+                <option>全部类型</option>
+                <option>资源</option>
+                <option>供应商</option>
+                <option>活动</option>
+              </select>
+              <select aria-label="访问成员">
+                <option>全部成员</option>
+                <option>王晓丽</option>
+                <option>刘晨</option>
+                <option>张敏</option>
+              </select>
+              <input type="date" aria-label="起始日期" />
+              <input type="date" aria-label="结束日期" />
+              <input type="search" placeholder="搜索关键字" aria-label="搜索访问记录" />
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>访问对象</th>
+                  <th>类型</th>
+                  <th>成员</th>
+                  <th>时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>能源央企渠道</td>
+                  <td>资源</td>
+                  <td>王晓丽</td>
+                  <td>2024-04-16 08:42</td>
+                  <td><a class="detail-link" href="#">查看画像</a></td>
+                </tr>
+                <tr>
+                  <td>智联科技</td>
+                  <td>供应商</td>
+                  <td>刘晨</td>
+                  <td>2024-04-15 15:28</td>
+                  <td><a class="detail-link" href="#">发起沟通</a></td>
+                </tr>
+                <tr>
+                  <td>长三角医疗项目对接会</td>
+                  <td>活动</td>
+                  <td>张敏</td>
+                  <td>2024-04-15 09:05</td>
+                  <td><a class="detail-link" href="#">查看报名</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/dashboard.js"></script>
+  </body>
+</html>

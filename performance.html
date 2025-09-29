@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多多资源协同平台 - 业绩提交</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-title">业绩提交</span>
+        <span class="topbar-subtitle">沉淀案例成果，提升平台可信度</span>
+      </div>
+      <div class="topbar-actions">
+        <button
+          class="icon-button"
+          id="messageToggle"
+          aria-expanded="false"
+          aria-controls="messagePanel"
+          aria-haspopup="true"
+        >
+          <span aria-hidden="true">🔔</span>
+          <span class="sr-only">查看最新消息</span>
+        </button>
+        <button class="icon-button" aria-label="快速新建">
+          <span aria-hidden="true">➕</span>
+        </button>
+        <div class="topbar-user">
+          <button
+            class="user-toggle"
+            id="userToggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="avatar" aria-hidden="true">SL</div>
+            <div class="user-meta">
+              <strong>王晓丽</strong>
+              <div class="topbar-subtitle">超级管理员</div>
+            </div>
+            <span class="user-caret" aria-hidden="true">▾</span>
+          </button>
+          <div
+            class="user-menu"
+            id="userMenu"
+            role="menu"
+            aria-label="用户操作"
+            aria-hidden="true"
+          >
+            <a href="#" role="menuitem">会员服务</a>
+            <button type="button" role="menuitem">退出登录</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="topbar-dropdown"
+        id="messagePanel"
+        role="region"
+        aria-label="最新消息"
+        aria-hidden="true"
+      >
+        <h4>最新消息</h4>
+        <div class="message-item">
+          <strong>平台助理</strong>
+          <span>今天 09:32</span>
+          <p>「长三角医疗项目对接会」报名即将截止，已为您保留 2 个嘉宾席位。</p>
+        </div>
+        <div class="message-item">
+          <strong>系统通知</strong>
+          <span>昨天 18:05</span>
+          <p>资源「能源央企渠道」获得 4 次收藏，建议跟进意向会员。</p>
+        </div>
+        <div class="message-item">
+          <strong>智联科技</strong>
+          <span>昨天 15:21</span>
+          <p>感谢提交联合解决方案，我们已安排技术同事与您对接细节。</p>
+        </div>
+      </div>
+    </header>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h3>会员中心</h3>
+        <a href="dashboard.html">会员信息展示</a>
+        <a href="events.html">会议活动</a>
+        <a href="resources.html">资源市场</a>
+        <a href="products.html">产品服务市场</a>
+        <a class="active" href="performance.html">业绩提交</a>
+        <a href="visits.html">访问记录</a>
+      </aside>
+      <div class="main-column">
+        <main class="content-area">
+          <section class="content-card" id="performance">
+            <div class="member-header">
+              <div>
+                <h2>业绩提交</h2>
+                <p>
+                  将成功案例、交易成果在线申报，平台将审核并同步到品牌曝光与画像加权中，帮助企业快速提升可信度。
+                </p>
+              </div>
+            </div>
+            <div class="performance-form">
+              <div class="performance-grid">
+                <div>
+                  <label for="achievement-name">业绩名称</label>
+                  <input id="achievement-name" placeholder="如：数字医院合作项目" />
+                </div>
+                <div>
+                  <label for="achievement-amount">交易金额</label>
+                  <input id="achievement-amount" placeholder="如：¥3,500,000" />
+                </div>
+                <div>
+                  <label for="achievement-partner">合作方</label>
+                  <input id="achievement-partner" placeholder="填写合作单位" />
+                </div>
+                <div>
+                  <label for="achievement-date">成交时间</label>
+                  <input id="achievement-date" type="date" />
+                </div>
+              </div>
+              <div>
+                <label for="achievement-detail">项目亮点 / 交付成果</label>
+                <textarea
+                  id="achievement-detail"
+                  placeholder="概述合作背景、解决方案、交付成果以及可佐证的指标"
+                ></textarea>
+              </div>
+              <div class="filter-row">
+                <label for="achievement-file" class="ghost-button" style="display: inline-flex; align-items: center; gap: 8px;">
+                  📎 上传证明材料
+                  <input id="achievement-file" type="file" style="display: none;" />
+                </label>
+                <span class="topbar-subtitle">支持上传合同、发票、会议纪要等 PDF 或图片文件</span>
+              </div>
+              <div class="event-actions">
+                <div class="chip-group">
+                  <span class="chip">提交后进入审批</span>
+                  <span class="chip">通过后将自动曝光</span>
+                </div>
+                <button class="button primary" type="button">提交业绩</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/dashboard.js"></script>
+  </body>
+</html>
