@@ -9,6 +9,16 @@
   <body>
     <header class="topbar">
       <div class="topbar-left">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="展开菜单"
+          aria-controls="sidebarNav"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true">☰</span>
+        </button>
         <span class="topbar-title">会议活动</span>
         <span class="topbar-subtitle">浏览即将开展的重点活动安排</span>
       </div>
@@ -78,7 +88,7 @@
       </div>
     </header>
     <div class="dashboard">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebarNav" aria-label="会员中心导航">
         <h3>会员中心</h3>
         <a href="dashboard.html">会员信息展示</a>
         <a class="active" href="events.html">会议活动</a>
@@ -87,6 +97,7 @@
         <a href="performance.html">业绩提交</a>
         <a href="visits.html">访问记录</a>
       </aside>
+      <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
       <div class="main-column">
         <main class="content-area">
           <section class="content-card" id="events">
