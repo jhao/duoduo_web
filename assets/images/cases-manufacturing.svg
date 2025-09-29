@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="casesManufacturingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#casesManufacturingGradient)" />
+  <g fill="#ccfbf1" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">MANUFACTURING ALLIANCE</text>
+    <text x="200" y="280" font-size="42">供应链协同</text>
+    <text x="200" y="330" font-size="32" opacity="0.85">柔性生产联盟</text>
+  </g>
+  <g stroke="#99f6e4" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M200 480 Q 420 340 680 420 T 1000 380" />
+    <path d="M240 560 Q 520 400 780 480 T 1020 420" opacity="0.6" />
+  </g>
+  <g transform="translate(340 320)">
+    <rect width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.35)" stroke-width="8" />
+    <g fill="#ccfbf1">
+      <circle cx="140" cy="120" r="36" />
+      <circle cx="260" cy="200" r="44" opacity="0.8" />
+      <circle cx="380" cy="140" r="32" opacity="0.6" />
+    </g>
+  </g>
+</svg>

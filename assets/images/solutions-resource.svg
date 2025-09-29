@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="solutionsResourceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#solutionsResourceGradient)" />
+  <g stroke="#bfdbfe" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M200 500 Q 420 360 620 460 T 1000 360" />
+    <path d="M240 580 Q 520 420 820 520 T 980 480" opacity="0.6" />
+  </g>
+  <g fill="#dbeafe" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">RESOURCE MARKET</text>
+    <text x="200" y="290" font-size="42">资源市场协同场景</text>
+    <text x="200" y="340" font-size="32" opacity="0.8">可视化评估与撮合</text>
+  </g>
+  <g transform="translate(360 320)">
+    <rect x="0" y="0" width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="8" />
+    <g fill="#e0f2fe">
+      <circle cx="120" cy="120" r="34" />
+      <circle cx="240" cy="200" r="42" opacity="0.8" />
+      <circle cx="380" cy="140" r="30" opacity="0.6" />
+    </g>
+  </g>
+</svg>

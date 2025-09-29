@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="solutionsProductGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#solutionsProductGradient)" />
+  <g fill="rgba(255,255,255,0.18)">
+    <rect x="160" y="220" width="880" height="360" rx="48" />
+    <rect x="220" y="280" width="360" height="240" rx="32" />
+    <rect x="620" y="280" width="320" height="240" rx="32" opacity="0.7" />
+  </g>
+  <g fill="#ecfdf5" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="180" y="200" font-size="62" font-weight="700">PRODUCT SERVICES</text>
+    <text x="180" y="260" font-size="40">产品服务市场</text>
+    <text x="180" y="310" font-size="32" opacity="0.8">供应链画像管理</text>
+  </g>
+  <g transform="translate(260 340)" stroke="#d1fae5" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M0 120 Q 140 40 280 120 T 520 100" />
+    <path d="M40 200 Q 180 120 320 200 T 500 180" opacity="0.6" />
+  </g>
+  <g transform="translate(320 360)" fill="#ecfdf5">
+    <circle cx="60" cy="80" r="28" />
+    <circle cx="180" cy="140" r="36" opacity="0.8" />
+    <circle cx="300" cy="100" r="32" opacity="0.6" />
+    <circle cx="420" cy="160" r="24" opacity="0.5" />
+  </g>
+</svg>

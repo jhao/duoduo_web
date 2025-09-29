@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="casesPharmaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#casesPharmaGradient)" />
+  <g fill="#dbeafe" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">PHARMA CASE</text>
+    <text x="200" y="280" font-size="42">创新药企渠道加速</text>
+    <text x="200" y="330" font-size="32" opacity="0.85">多省市医院资源</text>
+  </g>
+  <g stroke="#bfdbfe" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M220 480 Q 420 360 640 420 T 980 360" />
+    <path d="M260 560 Q 500 420 740 480 T 1000 420" opacity="0.6" />
+  </g>
+  <g transform="translate(340 320)">
+    <rect width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="8" />
+    <g fill="#dbeafe">
+      <circle cx="140" cy="120" r="34" />
+      <circle cx="260" cy="200" r="44" opacity="0.8" />
+      <circle cx="380" cy="140" r="30" opacity="0.6" />
+    </g>
+  </g>
+</svg>

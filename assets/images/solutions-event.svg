@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="solutionsEventGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#solutionsEventGradient)" />
+  <g fill="#eef2ff" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">EVENT HUB</text>
+    <text x="200" y="280" font-size="42">活动会议中枢</text>
+    <text x="200" y="330" font-size="32" opacity="0.85">全流程档案沉淀</text>
+  </g>
+  <g transform="translate(320 320)">
+    <rect width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.35)" stroke-width="8" />
+    <g fill="#e0e7ff">
+      <circle cx="140" cy="120" r="32" />
+      <circle cx="260" cy="200" r="40" opacity="0.8" />
+      <circle cx="380" cy="140" r="34" opacity="0.6" />
+    </g>
+  </g>
+  <g stroke="#e0e7ff" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7">
+    <path d="M160 520 Q 360 400 560 500 T 960 420" />
+    <path d="M180 600 Q 420 460 660 560 T 980 500" opacity="0.6" />
+  </g>
+</svg>

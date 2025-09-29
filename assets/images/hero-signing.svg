@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="heroSigningGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#heroSigningGradient)" />
+  <g fill="rgba(255,255,255,0.18)">
+    <rect x="160" y="200" width="880" height="420" rx="52" />
+    <rect x="220" y="260" width="760" height="300" rx="36" fill="rgba(255,255,255,0.22)" />
+  </g>
+  <g stroke="#fee2e2" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M300 420 Q 460 360 620 440 T 900 420" />
+    <path d="M320 480 Q 520 420 720 500 T 900 500" opacity="0.6" />
+  </g>
+  <g fill="#fff1f2" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="260" y="240" font-size="60" font-weight="700">SIGNING CEREMONY</text>
+    <text x="260" y="310" font-size="40">跨产业合作签约</text>
+    <text x="260" y="360" font-size="32" opacity="0.85">资源撮合快速落地</text>
+  </g>
+  <g transform="translate(320 380)" fill="#fff1f2">
+    <circle cx="60" cy="60" r="26" opacity="0.9" />
+    <circle cx="160" cy="120" r="34" opacity="0.7" />
+    <circle cx="300" cy="80" r="28" opacity="0.6" />
+    <circle cx="440" cy="140" r="42" opacity="0.5" />
+  </g>
+</svg>

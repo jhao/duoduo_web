@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="casesParkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#casesParkGradient)" />
+  <g fill="#ede9fe" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">PARK ALLIANCE</text>
+    <text x="200" y="280" font-size="42">园区招商项目撮合</text>
+    <text x="200" y="330" font-size="32" opacity="0.85">战略合作落地</text>
+  </g>
+  <g stroke="#ddd6fe" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M200 480 Q 460 360 720 440 T 1020 380" />
+    <path d="M240 560 Q 520 420 780 500 T 1040 420" opacity="0.6" />
+  </g>
+  <g transform="translate(340 320)">
+    <rect width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.35)" stroke-width="8" />
+    <g fill="#ede9fe">
+      <circle cx="140" cy="120" r="32" />
+      <circle cx="260" cy="200" r="42" opacity="0.8" />
+      <circle cx="380" cy="140" r="30" opacity="0.6" />
+    </g>
+  </g>
+</svg>

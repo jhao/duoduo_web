@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="heroVisualGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#heroVisualGradient)" />
+  <g fill="rgba(255,255,255,0.2)">
+    <polygon points="140,180 1060,120 1000,700 120,640" />
+    <polygon points="220,260 960,220 900,620 200,580" fill="rgba(255,255,255,0.25)" />
+  </g>
+  <g fill="#ecfeff" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="180" y="190" font-size="64" font-weight="700">EVENT VISION</text>
+    <text x="180" y="260" font-size="42">智慧园区招商会</text>
+    <text x="180" y="320" font-size="32" opacity="0.85">数字化展示与互动体验</text>
+  </g>
+  <g transform="translate(320 360)" stroke="#ecfeff" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M0 120 Q 120 -20 240 80 T 480 60" />
+    <path d="M40 200 Q 200 40 360 200 T 520 180" opacity="0.6" />
+  </g>
+  <g transform="translate(360 420)" fill="#ecfeff">
+    <circle cx="60" cy="60" r="26" />
+    <circle cx="180" cy="120" r="32" opacity="0.8" />
+    <circle cx="320" cy="80" r="40" opacity="0.6" />
+    <circle cx="460" cy="140" r="28" opacity="0.5" />
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ecosystemConsultingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#ecosystemConsultingGradient)" />
+  <g fill="#e0e7ff" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="200" y="220" font-size="64" font-weight="700">STRATEGY PARTNERS</text>
+    <text x="200" y="280" font-size="42">战略咨询合作</text>
+    <text x="200" y="330" font-size="32" opacity="0.85">从规划到落地</text>
+  </g>
+  <g transform="translate(320 320)">
+    <rect width="520" height="320" rx="36" ry="36" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.35)" stroke-width="8" />
+    <g fill="#e0e7ff">
+      <circle cx="140" cy="120" r="34" />
+      <circle cx="260" cy="200" r="40" opacity="0.8" />
+      <circle cx="380" cy="140" r="30" opacity="0.6" />
+    </g>
+  </g>
+  <g stroke="#c7d2fe" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M200 500 Q 420 380 680 440 T 1000 380" />
+    <path d="M240 580 Q 520 440 780 500 T 1020 440" opacity="0.6" />
+  </g>
+</svg>
