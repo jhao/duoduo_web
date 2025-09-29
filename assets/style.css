@@ -521,6 +521,7 @@ body.menu-open {
   right: 0;
   width: 100%;
   z-index: 40;
+  overflow: visible;
 }
 
 .topbar::after {
@@ -669,7 +670,7 @@ body.menu-open {
   padding: 8px 0;
   display: none;
   flex-direction: column;
-  z-index: 60;
+  z-index: 140;
 }
 
 .user-menu.active {
@@ -707,6 +708,7 @@ body.menu-open {
   display: none;
   flex-direction: column;
   gap: 16px;
+  z-index: 140;
 }
 
 .topbar-dropdown.active {
