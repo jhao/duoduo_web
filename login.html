@@ -22,7 +22,7 @@
       </div>
       <div class="login-form">
         <h2>会员登录</h2>
-        <form>
+        <form id="loginForm">
           <div class="input-group">
             <label for="account">账号或手机号</label>
             <input id="account" type="text" placeholder="请输入账号" />
@@ -43,5 +43,14 @@
         </p>
       </div>
     </div>
+    <script>
+      const loginForm = document.getElementById('loginForm');
+      if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          window.location.href = 'dashboard.html';
+        });
+      }
+    </script>
   </body>
 </html>

@@ -10,361 +10,851 @@
     <div class="dashboard">
       <aside class="sidebar">
         <h3>会员中心</h3>
-        <a class="active" href="#member">会员信息</a>
-        <a href="#events">活动会议</a>
+        <a class="active" href="#member">会员信息展示</a>
+        <a href="#events">会议活动</a>
         <a href="#resources">资源市场</a>
         <a href="#products">产品服务市场</a>
-        <a href="#messages">消息与通知</a>
-        <a href="#analytics">访问与业绩</a>
+        <a href="#performance">业绩提交</a>
+        <a href="#visits">访问记录</a>
       </aside>
-      <main class="content-area">
-        <section class="content-card" id="member">
-          <h2>会员信息维护</h2>
-          <p>
-            完整的会员信息将帮助平台精准推荐合作机会，提升资源连接效率。请维护企业介绍、资源渠道、服务能力与合作偏好。
-          </p>
-          <div class="form-grid">
-            <div>
-              <label for="company-name">企业名称</label>
-              <input id="company-name" placeholder="请输入企业名称" />
-            </div>
-            <div>
-              <label for="member-role">会员角色</label>
-              <select id="member-role">
-                <option>渠道资源方</option>
-                <option>产品/服务提供方</option>
-                <option>产业资本</option>
-                <option>政府/园区</option>
-              </select>
-            </div>
-            <div>
-              <label for="region">期望服务地区</label>
-              <input id="region" placeholder="如：华东、粤港澳、海外" />
-            </div>
-            <div>
-              <label for="industry">期望服务行业</label>
-              <input id="industry" placeholder="如：医疗、先进制造、能源" />
+      <div class="main-column">
+        <header class="topbar">
+          <div class="topbar-left">
+            <span class="topbar-title">会员工作台</span>
+            <span class="topbar-subtitle">欢迎回来，智联控股 · 今日待办 3 项</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="messageToggle" aria-expanded="false" aria-controls="messagePanel">
+              <span aria-hidden="true">🔔</span>
+            </button>
+            <button class="icon-button" aria-label="快速新建">
+              <span aria-hidden="true">➕</span>
+            </button>
+            <div class="topbar-user">
+              <div class="avatar" aria-hidden="true">SL</div>
+              <div>
+                <strong>王晓丽</strong>
+                <div class="topbar-subtitle">超级管理员</div>
+              </div>
             </div>
           </div>
-          <div class="form-grid">
-            <div>
-              <label for="resource-intro">资源渠道介绍</label>
-              <textarea id="resource-intro" placeholder="描述可触达的领导层级、业务部门、渠道资源等"></textarea>
-            </div>
-            <div>
-              <label for="capability">产品或服务能力介绍</label>
-              <textarea id="capability" placeholder="列举核心产品、服务团队、过往项目成果"></textarea>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div>
-              <label for="cooperation">希望合作方式</label>
-              <textarea id="cooperation" placeholder="如：联合投标、渠道代理、联合投资、项目孵化"></textarea>
-            </div>
-            <div>
-              <label for="company-profile">企业介绍</label>
-              <textarea id="company-profile" placeholder="企业概况、规模、核心团队、核心案例"></textarea>
-            </div>
-          </div>
-          <div>
-            <label for="history">已有合作清单</label>
-            <textarea id="history" placeholder="列举与平台内会员已达成的合作或项目"></textarea>
-          </div>
-          <div>
-            <label for="activities">已参与活动</label>
-            <textarea id="activities" placeholder="填写已参与活动名称、日期与成果"></textarea>
-          </div>
-          <button class="button primary" type="button">保存会员信息</button>
-        </section>
-
-        <section class="content-card" id="events">
-          <h2>活动会议管理</h2>
-          <p>发起或参与平台活动，支持多审批节点、预算控制、费用设置与流程归档。</p>
-          <div class="form-grid">
-            <div>
-              <label for="event-title">会议主题</label>
-              <input id="event-title" placeholder="请输入会议或活动名称" />
-            </div>
-            <div>
-              <label for="event-attendees">人数期望</label>
-              <input id="event-attendees" placeholder="如：50 人" />
-            </div>
-            <div>
-              <label for="event-venues">场地诉求</label>
-              <input id="event-venues" placeholder="如：酒店宴会厅/园区会议中心" />
-            </div>
-            <div>
-              <label for="event-hosts">拟邀请人员</label>
-              <input id="event-hosts" placeholder="行业专家、政府领导、企业高管" />
-            </div>
-          </div>
-          <div class="form-grid">
-            <div>
-              <label for="event-dates">时间窗口</label>
-              <textarea id="event-dates" placeholder="可填写多个备选时间，格式：2024/05/18 上午"></textarea>
-            </div>
-            <div>
-              <label for="event-hospitality">会议招待要求</label>
-              <textarea id="event-hospitality" placeholder="住宿、接待、礼品需求"></textarea>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div>
-              <label for="event-dining">会议餐食要求</label>
-              <textarea id="event-dining" placeholder="如：商务简餐、自助晚宴、茶歇设置"></textarea>
-            </div>
-            <div>
-              <label for="event-transport">会议用车需求</label>
-              <textarea id="event-transport" placeholder="如：嘉宾接送、商务大巴、专车"></textarea>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div>
-              <label for="event-budget">预算与费用</label>
-              <input id="event-budget" placeholder="预算金额，是否设置参会费用" />
-            </div>
-            <div>
-              <label for="event-approval">审批节点</label>
-              <textarea id="event-approval" placeholder="填写管理员设置的审批环节"></textarea>
-            </div>
-          </div>
-          <button class="button primary" type="button">提交活动审批</button>
-
-          <table class="table">
-            <caption>活动立项进度</caption>
-            <thead>
-              <tr>
-                <th>会议主题</th>
-                <th>状态</th>
-                <th>预算</th>
-                <th>审批节点</th>
-                <th>参会费用</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2024 产业合作圆桌</td>
-                <td><span class="status pending">审批中</span></td>
-                <td>¥80,000</td>
-                <td>业务审批 → 财务审核 → 管理员确认</td>
-                <td>VIP ¥1,500</td>
-              </tr>
-              <tr>
-                <td>长三角医疗项目对接会</td>
-                <td><span class="status success">已发布</span></td>
-                <td>¥120,000</td>
-                <td>业务审批 → 会议执行 → 档案归档</td>
-                <td>免费</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>活动归档提醒</h4>
-              <p>请在会议结束后 3 个工作日内上传活动过程资料、成果总结与参会名单。</p>
-            </div>
-            <div class="timeline-item">
-              <h4>会议参与记录</h4>
-              <p>近期已参与「数字园区招商研讨会」，请更新跟进结果。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-card" id="resources">
-          <h2>资源市场</h2>
-          <p>展示可共享的市场资源，并通过画像维度评估资源可转化率。</p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>资源名称</th>
-                <th>可触达领导等级</th>
-                <th>业务部门</th>
-                <th>行业方向</th>
-                <th>成功案例</th>
-                <th>回款情况</th>
-                <th>画像标签</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>某省卫健委核心渠道</td>
-                <td>厅局级</td>
-                <td>医政医管</td>
-                <td>医疗健康</td>
-                <td>智慧医院建设</td>
-                <td>近 12 个月回款 500 万</td>
-                <td>
-                  <div class="chip-group">
-                    <span class="chip">高转化</span>
-                    <span class="chip">密切合作</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>能源央企渠道</td>
-                <td>副总裁级</td>
-                <td>新能源投资部</td>
-                <td>双碳能源</td>
-                <td>分布式能源项目</td>
-                <td>在签订单 ¥30,000,000</td>
-                <td>
-                  <div class="chip-group">
-                    <span class="chip">持续跟进</span>
-                    <span class="chip">行业重点</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>大型商超连锁渠道</td>
-                <td>董事会</td>
-                <td>采购中心</td>
-                <td>消费零售</td>
-                <td>新品引入成功案例</td>
-                <td>回款周期 45 天</td>
-                <td>
-                  <div class="chip-group">
-                    <span class="chip">中高潜力</span>
-                    <span class="chip">中度合作</span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="content-card" id="products">
-          <h2>产品服务市场</h2>
-          <p>提交企业能力并完成供应商画像，支持会员按需选择合适的合作伙伴。</p>
-          <div class="form-grid">
-            <div>
-              <label for="product-name">产品/服务名称</label>
-              <input id="product-name" placeholder="请输入产品或服务名称" />
-            </div>
-            <div>
-              <label for="supply-scope">可控上下游企业</label>
-              <input id="supply-scope" placeholder="列出可协同的上下游企业" />
-            </div>
-            <div>
-              <label for="market-expect">期望市场需求</label>
-              <input id="market-expect" placeholder="如：政府数字化、智慧园区" />
-            </div>
-            <div>
-              <label for="performance">企业业绩概况</label>
-              <input id="performance" placeholder="如：年度营收、核心客户" />
-            </div>
-          </div>
-          <div>
-            <label for="service-detail">服务能力说明</label>
-            <textarea id="service-detail" placeholder="描述实施能力、服务团队、交付模式"></textarea>
-          </div>
-          <button class="button primary" type="button">提交到供应商池</button>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th>供应商</th>
-                <th>产品能力</th>
-                <th>行业经验</th>
-                <th>服务地域</th>
-                <th>画像标签</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>智联科技</td>
-                <td>智慧园区平台、物联网集成</td>
-                <td>园区数字化 12 年经验</td>
-                <td>全国</td>
-                <td>
-                  <div class="chip-group">
-                    <span class="chip">明星供应商</span>
-                    <span class="chip">交付稳定</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>合创咨询</td>
-                <td>产业策略规划、招商服务</td>
-                <td>政府园区 8 年项目经验</td>
-                <td>华东 / 华南</td>
-                <td>
-                  <div class="chip-group">
-                    <span class="chip">高口碑</span>
-                    <span class="chip">快速响应</span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="content-card" id="messages">
-          <h2>消息与通知</h2>
-          <p>平台通知将同步发送至微信公众平台，支持成员之间直接交流。</p>
-          <div class="message-list">
+          <div class="topbar-dropdown" id="messagePanel" role="region" aria-label="最新消息">
+            <h4>最新消息</h4>
             <div class="message-item">
-              <strong>管理员</strong>
-              <span>2024-04-16 09:30</span>
-              <p>「长三角医疗项目对接会」已通过终审，欢迎邀请合作伙伴报名参加。</p>
+              <strong>平台助理</strong>
+              <span>今天 09:32</span>
+              <p>「长三角医疗项目对接会」报名即将截止，已为您保留 2 个嘉宾席位。</p>
             </div>
             <div class="message-item">
               <strong>系统通知</strong>
-              <span>2024-04-15 16:45</span>
-              <p>您的资源「能源央企渠道」被会员 XXX 收藏，建议尽快发起沟通。</p>
+              <span>昨天 18:05</span>
+              <p>资源「能源央企渠道」获得 4 次收藏，建议跟进意向会员。</p>
             </div>
             <div class="message-item">
               <strong>智联科技</strong>
-              <span>2024-04-14 11:05</span>
-              <p>已收到贵司供应商合作申请，期待进一步交流细节。</p>
+              <span>昨天 15:21</span>
+              <p>感谢提交联合解决方案，我们已安排技术同事与您对接细节。</p>
             </div>
           </div>
-        </section>
+        </header>
+        <main class="content-area">
+          <section class="content-card member-overview" id="member">
+            <div class="member-header">
+              <div>
+                <h2>会员信息展示</h2>
+                <p>
+                  平台自动生成企业画像，帮助合作方快速了解资源能力与服务优势。根据画像分值匹配的推荐将同步展示在资源与活动模块。
+                </p>
+              </div>
+              <button class="ghost-button" type="button">更新资料</button>
+            </div>
+            <div class="member-summary">
+              <div class="member-card">
+                <div class="badge">重点服务会员</div>
+                <h3>上海智联控股集团</h3>
+                <div class="member-meta">
+                  <span>会员角色：渠道资源方 · 产品服务提供方</span>
+                  <span>总部城市：上海 · 服务区域：全国 + 东南亚</span>
+                  <span>重点行业：医疗健康、先进制造、园区数字化</span>
+                </div>
+                <div class="chip-group">
+                  <span class="chip">战略伙伴</span>
+                  <span class="chip">月活跃指数 96</span>
+                  <span class="chip">成功案例 18</span>
+                </div>
+              </div>
+              <div class="radar-wrapper">
+                <h3>会员画像雷达</h3>
+                <canvas id="memberRadar" aria-label="会员能力雷达图" role="img"></canvas>
+                <div class="radar-legend">
+                  <span class="chip">资源协同 4.8</span>
+                  <span class="chip">交付能力 4.5</span>
+                  <span class="chip">创新能力 4.2</span>
+                  <span class="chip">活动响应 4.9</span>
+                  <span class="chip">信用体系 4.7</span>
+                </div>
+              </div>
+            </div>
+            <div class="info-grid">
+              <div class="info-card">
+                <h4>核心资源与渠道</h4>
+                <ul>
+                  <li>覆盖 16 个省市卫健委与大型医院渠道，深耕医疗数字化项目。</li>
+                  <li>与 12 家产业基金建立联合投拓机制，可提供投融资撮合。</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <h4>产品与服务矩阵</h4>
+                <ul>
+                  <li>智慧园区云平台、产业大数据驾驶舱、数字招商工具链。</li>
+                  <li>提供咨询规划、项目交付、运营代管全生命周期服务。</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <h4>典型合作案例</h4>
+                <ul>
+                  <li>2023 年与 XX 医疗集团共建智慧医院平台，半年完成 3 期上线。</li>
+                  <li>联合数字园区运营中心打造招商飞轮，创造 5.2 亿签约额。</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <h4>当前跟进事项</h4>
+                <ul>
+                  <li>数字疗法项目资源撮合：审批中 · 预计 4 月底签约。</li>
+                  <li>新能源储能路演活动：等待技术团队确认演讲嘉宾。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-        <section class="content-card" id="analytics">
-          <h2>访问记录与业绩提交</h2>
-          <p>平台将记录所有资源、供应商访问行为，并支持业绩交易申报以获得更高曝光。</p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>访问对象</th>
-                <th>类型</th>
-                <th>时间</th>
-                <th>操作</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>能源央企渠道</td>
-                <td>资源</td>
-                <td>2024-04-16 08:42</td>
-                <td>查看详情</td>
-              </tr>
-              <tr>
-                <td>智联科技</td>
-                <td>供应商</td>
-                <td>2024-04-15 15:28</td>
-                <td>收藏</td>
-              </tr>
-              <tr>
-                <td>长三角医疗项目对接会</td>
-                <td>活动</td>
-                <td>2024-04-15 09:05</td>
-                <td>报名</td>
-              </tr>
-            </tbody>
-          </table>
+          <section class="content-card" id="events">
+            <div class="member-header">
+              <div>
+                <h2>会议活动清单</h2>
+                <p>
+                  先浏览近期会议活动安排，支持快速筛选、报名及发起。点击「申请活动」进入引导式表单，平台会同步给运营顾问。
+                </p>
+              </div>
+              <button class="button primary" id="openEventModal" type="button">申请活动</button>
+            </div>
+            <div class="event-grid">
+              <article class="event-card">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="产业合作圆桌" />
+                <div class="event-card-content">
+                  <div class="chip-group">
+                    <span class="chip">产业合作</span>
+                    <span class="chip">上海</span>
+                  </div>
+                  <h3>2024 产业合作圆桌</h3>
+                  <p>高端制造与医疗企业闭门交流，聚焦跨行业资源协同。</p>
+                  <div class="event-meta">
+                    <span>4 月 28 日</span>
+                    <span>人数 60</span>
+                    <span>报名截止 4 月 20 日</span>
+                  </div>
+                  <div class="event-actions">
+                    <a class="detail-link" href="#">查看议程</a>
+                    <button class="ghost-button" type="button">报名参加</button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <img src="https://images.unsplash.com/photo-1529338296731-c4280a44fc47?auto=format&fit=crop&w=900&q=80" alt="双碳能源峰会" />
+                <div class="event-card-content">
+                  <div class="chip-group">
+                    <span class="chip">能源双碳</span>
+                    <span class="chip">线上直播</span>
+                  </div>
+                  <h3>双碳能源创新峰会</h3>
+                  <p>聚焦储能、新能源电站与低碳园区方案的合作撮合。</p>
+                  <div class="event-meta">
+                    <span>5 月 12 日</span>
+                    <span>人数 300</span>
+                    <span>报名开放中</span>
+                  </div>
+                  <div class="event-actions">
+                    <a class="detail-link" href="#">查看议程</a>
+                    <button class="ghost-button" type="button">预约席位</button>
+                  </div>
+                </div>
+              </article>
+              <article class="event-card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="数字园区招商营" />
+                <div class="event-card-content">
+                  <div class="chip-group">
+                    <span class="chip">园区招商</span>
+                    <span class="chip">广州</span>
+                  </div>
+                  <h3>数字园区招商实战营</h3>
+                  <p>围绕园区数字化招商工具，安排项目实战与顾问辅导。</p>
+                  <div class="event-meta">
+                    <span>5 月 26-27 日</span>
+                    <span>人数 80</span>
+                    <span>线下培训</span>
+                  </div>
+                  <div class="event-actions">
+                    <a class="detail-link" href="#">查看议程</a>
+                    <button class="ghost-button" type="button">收藏活动</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
 
-          <div>
-            <label for="achievement">业绩交易申报</label>
-            <textarea
-              id="achievement"
-              placeholder="填写业绩名称、交易金额、合作方、成交时间，并上传证明材料"
-            ></textarea>
-          </div>
-          <button class="button primary" type="button">提交业绩获取曝光</button>
-        </section>
-      </main>
+          <section class="content-card" id="resources">
+            <div class="member-header">
+              <div>
+                <h2>资源市场 · 智能筛选</h2>
+                <p>
+                  结合画像评分、合作热度与行业维度，实现类似电商的快速选品体验。多条件组合筛选后，可进入右侧画像抽屉查看详情。
+                </p>
+              </div>
+            </div>
+            <div class="filter-panel">
+              <div class="filter-row">
+                <select aria-label="行业筛选">
+                  <option>全部行业</option>
+                  <option>医疗健康</option>
+                  <option>双碳能源</option>
+                  <option>文化传媒</option>
+                </select>
+                <select aria-label="地区筛选">
+                  <option>全部区域</option>
+                  <option>华东</option>
+                  <option>华南</option>
+                  <option>海外</option>
+                </select>
+                <select aria-label="画像评级筛选">
+                  <option>全部画像评级</option>
+                  <option>A 级 (4.5+)</option>
+                  <option>B 级 (4.0+)</option>
+                  <option>重点跟进</option>
+                </select>
+                <input type="search" placeholder="搜索资源名称/关键字" aria-label="搜索资源" />
+              </div>
+              <div class="filter-tags">
+                <span class="chip">高转化</span>
+                <span class="chip">最新入库</span>
+                <span class="chip">高层直连</span>
+                <span class="chip">政府园区</span>
+              </div>
+            </div>
+            <div class="market-grid">
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>某省卫健委核心渠道</h3>
+                    <p>触达省级卫健委决策层，支持智慧医院、数字健康等项目。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">画像评分 4.9</span>
+                    <small>合作热度：高</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>可触达领导等级：厅局级</li>
+                  <li>近 12 个月回款 500 万 · 成功项目 6 个</li>
+                  <li>核心需求：智慧医院、医共体、医疗信息化</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="某省卫健委核心渠道"
+                    data-summary="省级卫健委系统合作资源，适用于数字医疗与健康服务场景。"
+                    data-tags="厅局级;医疗健康;高转化"
+                    data-points="触达人群：卫健委主要领导;合作节奏：季度例会;适配方案：智慧医院、公共卫生大数据"
+                  >查看画像详情</a>
+                  <button class="ghost-button" type="button">加入收藏</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>能源央企渠道</h3>
+                    <p>覆盖能源央企新能源投资部，聚焦储能、电网数字化合作。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">画像评分 4.7</span>
+                    <small>合作热度：高</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>可触达领导等级：副总裁级</li>
+                  <li>在签订单 ¥30,000,000 · 重点推进储能项目</li>
+                  <li>核心需求：储能解决方案、低碳园区改造</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="能源央企渠道"
+                    data-summary="央企能源集团资源，适配双碳与新能源投资。"
+                    data-tags="新能源;资本对接;战略合作"
+                    data-points="合作关键人：副总裁、投资部;当前诉求：寻找储能一体化供应商;历史案例：分布式能源项目成功上线"
+                  >查看画像详情</a>
+                  <button class="ghost-button" type="button">发起沟通</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>城市文化传媒集群</h3>
+                    <p>整合头部媒体与城市文旅资源，擅长品牌传播与活动统筹。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">画像评分 4.4</span>
+                    <small>合作热度：中高</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>可触达领导等级：内容副总裁级</li>
+                  <li>强项：整合传播、内容共创、IP 运营</li>
+                  <li>适配场景：品牌发布会、园区开园活动、跨界合作</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="城市文化传媒集群"
+                    data-summary="文化传媒行业资源，提供品牌整合传播与活动执行能力。"
+                    data-tags="文化传媒;内容共创;品牌曝光"
+                    data-points="合作重点：打造多渠道传播矩阵;成功案例：城市文旅节庆活动;当前机会：寻找科技品牌联动"
+                  >查看画像详情</a>
+                  <button class="ghost-button" type="button">对比资源</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-card" id="products">
+            <div class="member-header">
+              <div>
+                <h2>产品服务市场 · 组合选型</h2>
+                <p>
+                  供应商画像、项目经验与交付能力一目了然，可按行业、能力、评分、交付区域等条件组合筛选，快速构建解决方案。
+                </p>
+              </div>
+            </div>
+            <div class="filter-panel">
+              <div class="filter-row">
+                <select aria-label="服务类型筛选">
+                  <option>全部服务类型</option>
+                  <option>数字化平台</option>
+                  <option>咨询规划</option>
+                  <option>教育培训</option>
+                </select>
+                <select aria-label="交付能力筛选">
+                  <option>全部交付等级</option>
+                  <option>五星交付</option>
+                  <option>四星交付</option>
+                  <option>成长供应商</option>
+                </select>
+                <select aria-label="服务区域筛选">
+                  <option>全部区域</option>
+                  <option>全国</option>
+                  <option>华东</option>
+                  <option>粤港澳大湾区</option>
+                </select>
+                <input type="search" placeholder="搜索供应商/产品" aria-label="搜索供应商" />
+              </div>
+              <div class="filter-tags">
+                <span class="chip">明星供应商</span>
+                <span class="chip">创新方案</span>
+                <span class="chip">交付口碑 4.5+</span>
+                <span class="chip">教育培训</span>
+              </div>
+            </div>
+            <div class="market-grid">
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>智联科技</h3>
+                    <p>智慧园区平台、物联网集成、数据中台建设。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.8</span>
+                    <small>交付等级：五星</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：园区数字化 12 年 · 50+ 成功案例</li>
+                  <li>服务地域：全国 · 支持海外远程交付</li>
+                  <li>优势：端到端实施、物联网硬件生态、持续运维</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="智联科技"
+                    data-summary="智慧园区与工业互联网领域的核心供应商。"
+                    data-tags="数字化平台;五星交付;全国"
+                    data-points="典型案例：张江智慧园区;团队规模：技术顾问 120+;对比优势：数据中台 + IoT 一体化"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">加入方案包</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>合创咨询</h3>
+                    <p>产业策略规划、招商服务、园区运营顾问。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.6</span>
+                    <small>交付等级：四星</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：政府园区 8 年 · 30+ 项目实战</li>
+                  <li>服务地域：华东 / 华南</li>
+                  <li>优势：策略规划、招商策略、联合路演执行</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="合创咨询"
+                    data-summary="专注政府园区的招商咨询伙伴，擅长策略 + 执行。"
+                    data-tags="咨询规划;快速响应;园区运营"
+                    data-points="代表案例：长三角科创园;顾问团队：资深合伙人 6 名;服务亮点：招商策略工作坊"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">预约顾问</button>
+                </div>
+              </article>
+              <article class="market-card">
+                <div class="market-card-header">
+                  <div>
+                    <h3>未来教育实验室</h3>
+                    <p>企业大学共建、产业人才培养、数字化学习平台。</p>
+                  </div>
+                  <div class="market-score">
+                    <span class="score-badge">服务评分 4.5</span>
+                    <small>交付等级：成长</small>
+                  </div>
+                </div>
+                <ul>
+                  <li>行业经验：教育与培训 10 年 · 服务企业 80+</li>
+                  <li>服务地域：全国 · 支持混合式培训</li>
+                  <li>优势：定制课程、人才画像评估、学习运营</li>
+                </ul>
+                <div class="market-actions">
+                  <a
+                    class="detail-link"
+                    href="#"
+                    data-name="未来教育实验室"
+                    data-summary="提供企业教育培训一体化解决方案。"
+                    data-tags="教育培训;人才发展;混合学习"
+                    data-points="核心产品：企业大学加速器;成功案例：新能源企业成长营;服务亮点：在线 + 线下混合运营"
+                  >查看供应商画像</a>
+                  <button class="ghost-button" type="button">加入对比</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-card" id="performance">
+            <div class="member-header">
+              <div>
+                <h2>业绩提交</h2>
+                <p>
+                  将成功案例、交易成果在线申报，平台将审核并同步到品牌曝光与画像加权中，帮助企业快速提升可信度。
+                </p>
+              </div>
+            </div>
+            <div class="performance-form">
+              <div class="performance-grid">
+                <div>
+                  <label for="achievement-name">业绩名称</label>
+                  <input id="achievement-name" placeholder="如：数字医院合作项目" />
+                </div>
+                <div>
+                  <label for="achievement-amount">交易金额</label>
+                  <input id="achievement-amount" placeholder="如：¥3,500,000" />
+                </div>
+                <div>
+                  <label for="achievement-partner">合作方</label>
+                  <input id="achievement-partner" placeholder="填写合作单位" />
+                </div>
+                <div>
+                  <label for="achievement-date">成交时间</label>
+                  <input id="achievement-date" type="date" />
+                </div>
+              </div>
+              <div>
+                <label for="achievement-detail">项目亮点 / 交付成果</label>
+                <textarea
+                  id="achievement-detail"
+                  placeholder="概述合作背景、解决方案、交付成果以及可佐证的指标"
+                ></textarea>
+              </div>
+              <div class="filter-row">
+                <label for="achievement-file" class="ghost-button" style="display: inline-flex; align-items: center; gap: 8px;">
+                  📎 上传证明材料
+                  <input id="achievement-file" type="file" style="display: none;" />
+                </label>
+                <span class="topbar-subtitle">支持上传合同、发票、会议纪要等 PDF 或图片文件</span>
+              </div>
+              <div class="event-actions">
+                <div class="chip-group">
+                  <span class="chip">提交后进入审批</span>
+                  <span class="chip">通过后将自动曝光</span>
+                </div>
+                <button class="button primary" type="button">提交业绩</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-card" id="visits">
+            <div class="member-header">
+              <div>
+                <h2>访问记录</h2>
+                <p>
+                  查看团队成员对资源、供应商、活动的访问行为，支持多条件筛选，便于精准跟进与业绩归因。
+                </p>
+              </div>
+            </div>
+            <div class="visit-filters">
+              <select aria-label="访问类型">
+                <option>全部类型</option>
+                <option>资源</option>
+                <option>供应商</option>
+                <option>活动</option>
+              </select>
+              <select aria-label="访问成员">
+                <option>全部成员</option>
+                <option>王晓丽</option>
+                <option>刘晨</option>
+                <option>张敏</option>
+              </select>
+              <input type="date" aria-label="起始日期" />
+              <input type="date" aria-label="结束日期" />
+              <input type="search" placeholder="搜索关键字" aria-label="搜索访问记录" />
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>访问对象</th>
+                  <th>类型</th>
+                  <th>成员</th>
+                  <th>时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>能源央企渠道</td>
+                  <td>资源</td>
+                  <td>王晓丽</td>
+                  <td>2024-04-16 08:42</td>
+                  <td><a class="detail-link" href="#">查看画像</a></td>
+                </tr>
+                <tr>
+                  <td>智联科技</td>
+                  <td>供应商</td>
+                  <td>刘晨</td>
+                  <td>2024-04-15 15:28</td>
+                  <td><a class="detail-link" href="#">发起沟通</a></td>
+                </tr>
+                <tr>
+                  <td>长三角医疗项目对接会</td>
+                  <td>活动</td>
+                  <td>张敏</td>
+                  <td>2024-04-15 09:05</td>
+                  <td><a class="detail-link" href="#">查看报名</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </div>
     </div>
+
+    <div class="modal" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+      <div class="modal-content">
+        <div class="modal-steps">
+          <div class="step-dot active" data-step="0">1</div>
+          <div class="step-dot" data-step="1">2</div>
+          <div class="step-dot" data-step="2">3</div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-step active" data-step="0">
+            <h3 id="eventModalTitle">活动基本信息</h3>
+            <p>填写活动名称、时间与目标嘉宾，平台会自动匹配适合的顾问与资源。</p>
+            <div class="form-grid">
+              <div>
+                <label for="modal-event-name">活动名称</label>
+                <input id="modal-event-name" placeholder="如：数字疗法合作交流会" />
+              </div>
+              <div>
+                <label for="modal-event-date">期望时间</label>
+                <input id="modal-event-date" type="date" />
+              </div>
+              <div>
+                <label for="modal-event-city">活动城市/形式</label>
+                <input id="modal-event-city" placeholder="如：上海线下 / 线上直播" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-step" data-step="1">
+            <h3>活动资源需求</h3>
+            <p>描述您需要的平台资源支持，包含场地、嘉宾邀请、宣传推广等。</p>
+            <div class="form-grid">
+              <div>
+                <label for="modal-guest">拟邀请嘉宾</label>
+                <textarea id="modal-guest" placeholder="列出重点嘉宾与期待合作方"></textarea>
+              </div>
+              <div>
+                <label for="modal-support">平台支持诉求</label>
+                <textarea id="modal-support" placeholder="如：政府园区资源、产业资本、媒体曝光"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-step" data-step="2">
+            <h3>预算与审批</h3>
+            <p>完善预算范围与审批节点，提交后运营顾问将协助推进。</p>
+            <div class="form-grid">
+              <div>
+                <label for="modal-budget">预算范围</label>
+                <input id="modal-budget" placeholder="如：¥80,000 - ¥120,000" />
+              </div>
+              <div>
+                <label for="modal-approval">内部审批节点</label>
+                <textarea id="modal-approval" placeholder="示例：业务审批 → 财务审核 → 管理员确认"></textarea>
+              </div>
+            </div>
+            <div class="chip-group">
+              <span class="chip">提交后 24 小时内响应</span>
+              <span class="chip">可同步微信通知</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="ghost-button" id="closeEventModal" type="button">取消</button>
+          <div>
+            <button class="ghost-button" id="prevStep" type="button">上一步</button>
+            <button class="button primary" id="nextStep" type="button">下一步</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="drawer" id="detailDrawer" aria-hidden="true">
+      <div class="event-actions" style="justify-content: flex-end;">
+        <button class="ghost-button" id="closeDrawer" type="button">关闭</button>
+      </div>
+      <h3 id="drawerTitle">画像详情</h3>
+      <p id="drawerSummary"></p>
+      <div class="chip-group" id="drawerTags"></div>
+      <ul id="drawerList"></ul>
+      <div class="event-actions">
+        <button class="button primary" type="button">发起合作</button>
+        <button class="ghost-button" type="button">收藏资源</button>
+      </div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const sidebarLinks = document.querySelectorAll('.sidebar a');
+      const observerOptions = { rootMargin: '-40% 0px -50% 0px', threshold: 0.1 };
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            sidebarLinks.forEach((link) => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('main section').forEach((section) => {
+        sectionObserver.observe(section);
+      });
+
+      const messageToggle = document.getElementById('messageToggle');
+      const messagePanel = document.getElementById('messagePanel');
+
+      if (messageToggle && messagePanel) {
+        messageToggle.addEventListener('click', () => {
+          const isOpen = messagePanel.classList.toggle('active');
+          messageToggle.setAttribute('aria-expanded', isOpen.toString());
+        });
+
+        document.addEventListener('click', (event) => {
+          if (
+            !messagePanel.contains(event.target) &&
+            !messageToggle.contains(event.target)
+          ) {
+            messagePanel.classList.remove('active');
+            messageToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      const radarCanvas = document.getElementById('memberRadar');
+      if (radarCanvas && window.Chart) {
+        new Chart(radarCanvas, {
+          type: 'radar',
+          data: {
+            labels: ['资源协同', '交付能力', '创新能力', '活动响应', '信用体系'],
+            datasets: [
+              {
+                label: '会员评分',
+                data: [4.8, 4.5, 4.2, 4.9, 4.7],
+                backgroundColor: 'rgba(78, 45, 142, 0.2)',
+                borderColor: 'rgba(78, 45, 142, 0.7)',
+                pointBackgroundColor: '#4e2d8e',
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            scales: {
+              r: {
+                beginAtZero: true,
+                max: 5,
+                ticks: { display: false },
+                grid: { color: 'rgba(78, 45, 142, 0.1)' },
+                angleLines: { color: 'rgba(78, 45, 142, 0.1)' },
+                pointLabels: { font: { size: 12 } },
+              },
+            },
+            plugins: { legend: { display: false } },
+          },
+        });
+      }
+
+      const eventModal = document.getElementById('eventModal');
+      const openEventModal = document.getElementById('openEventModal');
+      const closeEventModal = document.getElementById('closeEventModal');
+      const prevStepButton = document.getElementById('prevStep');
+      const nextStepButton = document.getElementById('nextStep');
+      const modalSteps = eventModal ? Array.from(eventModal.querySelectorAll('.modal-step')) : [];
+      const stepDots = eventModal ? Array.from(eventModal.querySelectorAll('.step-dot')) : [];
+      let currentStep = 0;
+
+      function updateStep(newStep) {
+        if (!eventModal) return;
+        currentStep = Math.max(0, Math.min(modalSteps.length - 1, newStep));
+        modalSteps.forEach((step, index) => step.classList.toggle('active', index === currentStep));
+        stepDots.forEach((dot, index) => dot.classList.toggle('active', index === currentStep));
+        if (prevStepButton) {
+          prevStepButton.disabled = currentStep === 0;
+        }
+        if (nextStepButton) {
+          nextStepButton.textContent = currentStep === modalSteps.length - 1 ? '提交申请' : '下一步';
+        }
+      }
+
+      if (openEventModal && eventModal) {
+        openEventModal.addEventListener('click', () => {
+          eventModal.classList.add('active');
+          updateStep(0);
+        });
+      }
+
+      if (closeEventModal && eventModal) {
+        closeEventModal.addEventListener('click', () => {
+          eventModal.classList.remove('active');
+        });
+      }
+
+      if (prevStepButton) {
+        prevStepButton.addEventListener('click', () => updateStep(currentStep - 1));
+      }
+
+      if (nextStepButton) {
+        nextStepButton.addEventListener('click', () => {
+          if (currentStep === modalSteps.length - 1) {
+            eventModal.classList.remove('active');
+            alert('活动申请已提交，我们会在 24 小时内与您联系。');
+          } else {
+            updateStep(currentStep + 1);
+          }
+        });
+      }
+
+      if (eventModal) {
+        eventModal.addEventListener('click', (event) => {
+          if (event.target === eventModal) {
+            eventModal.classList.remove('active');
+          }
+        });
+      }
+
+      stepDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => updateStep(index));
+      });
+
+      const detailDrawer = document.getElementById('detailDrawer');
+      const drawerTitle = document.getElementById('drawerTitle');
+      const drawerSummary = document.getElementById('drawerSummary');
+      const drawerTags = document.getElementById('drawerTags');
+      const drawerList = document.getElementById('drawerList');
+      const closeDrawer = document.getElementById('closeDrawer');
+
+      function openDrawer({ name, summary, tags, points }) {
+        if (!detailDrawer) return;
+        drawerTitle.textContent = name || '画像详情';
+        drawerSummary.textContent = summary || '';
+        drawerTags.innerHTML = '';
+        (tags || []).forEach((tag) => {
+          const span = document.createElement('span');
+          span.className = 'chip';
+          span.textContent = tag.trim();
+          drawerTags.appendChild(span);
+        });
+        drawerList.innerHTML = '';
+        (points || []).forEach((point) => {
+          const li = document.createElement('li');
+          li.textContent = point.trim();
+          drawerList.appendChild(li);
+        });
+        detailDrawer.classList.add('active');
+        detailDrawer.setAttribute('aria-hidden', 'false');
+      }
+
+      document.querySelectorAll('.market-card .detail-link').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const dataset = event.currentTarget.dataset;
+          openDrawer({
+            name: dataset.name,
+            summary: dataset.summary,
+            tags: (dataset.tags || '').split(';'),
+            points: (dataset.points || '').split(';'),
+          });
+        });
+      });
+
+      if (closeDrawer && detailDrawer) {
+        closeDrawer.addEventListener('click', () => {
+          detailDrawer.classList.remove('active');
+          detailDrawer.setAttribute('aria-hidden', 'true');
+        });
+      }
+
+      if (detailDrawer) {
+        detailDrawer.addEventListener('click', (event) => {
+          if (event.target === detailDrawer) {
+            detailDrawer.classList.remove('active');
+            detailDrawer.setAttribute('aria-hidden', 'true');
+          }
+        });
+      }
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          if (eventModal) {
+            eventModal.classList.remove('active');
+          }
+          if (detailDrawer) {
+            detailDrawer.classList.remove('active');
+            detailDrawer.setAttribute('aria-hidden', 'true');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
