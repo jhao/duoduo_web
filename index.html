@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>多多资源协同平台 - 官网首页</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <header class="scroll-reveal">
       <nav>
         <div class="logo">DUODUO SYNC</div>
         <div class="nav-links">
@@ -39,7 +44,40 @@
       </div>
     </header>
 
-    <section class="section" id="highlight">
+    <section class="section hero-gallery scroll-reveal" id="spotlight">
+      <div class="gallery-content">
+        <div>
+          <h2>沉浸式活动瞬间</h2>
+          <p>
+            浏览最新的会议与产业对接活动掠影，感受线上线下协同带来的真实火花。平台将会议主视觉、嘉宾瞬间、合作达成等精彩时刻集中呈现。
+          </p>
+          <div class="gallery-meta">
+            <span class="chip">精选活动</span>
+            <span class="chip">实时更新</span>
+            <span class="chip">线上线下</span>
+          </div>
+        </div>
+        <div class="gallery-slider" role="region" aria-label="活动图片轮播">
+          <div class="slider-track" id="galleryTrack">
+            <figure class="slide active">
+              <img src="https://images.unsplash.com/photo-1503424886300-4f83c2b4b8f0?auto=format&fit=crop&w=1200&q=80" alt="产业合作圆桌会议现场" />
+              <figcaption>产业合作圆桌 · 与会嘉宾深度交流</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80" alt="活动主视觉展示" />
+              <figcaption>智慧园区招商会 · 数字化展示与互动体验</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="合作签约仪式" />
+              <figcaption>跨产业合作签约 · 资源撮合快速落地</figcaption>
+            </figure>
+          </div>
+          <div class="slider-dots" id="galleryDots" role="tablist" aria-label="活动轮播控制"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scroll-reveal" id="highlight">
       <div class="section-header">
         <h2>平台价值亮点</h2>
         <p>
@@ -62,7 +100,7 @@
       </div>
     </section>
 
-    <section class="section" id="industries">
+    <section class="section scroll-reveal" id="industries">
       <div class="section-header">
         <h2>行业生态场景</h2>
         <p>
@@ -100,10 +138,20 @@
           <h3>绿色低碳项目</h3>
           <p>发掘新能源、新材料、循环经济项目，实现产业升级。</p>
         </div>
+        <div class="card">
+          <span class="tag">文化传媒</span>
+          <h3>品牌传播与内容共创</h3>
+          <p>整合传媒机构、内容制作团队与渠道资源，打造多场景传播矩阵。</p>
+        </div>
+        <div class="card">
+          <span class="tag">教育与培训</span>
+          <h3>人才发展加速器</h3>
+          <p>连接高校、培训机构与企业学院，支持人才培养、课程共建与认证。</p>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="solutions">
+    <section class="section scroll-reveal" id="solutions">
       <div class="section-header">
         <h2>协同方案矩阵</h2>
         <p>
@@ -130,7 +178,7 @@
       </div>
     </section>
 
-    <section class="section" id="cases">
+    <section class="section scroll-reveal" id="cases">
       <div class="section-header">
         <h2>精选合作案例</h2>
         <p>真实记录平台合作成果，为会员展示资源转化效率与业务增长路径。</p>
@@ -151,7 +199,7 @@
       </div>
     </section>
 
-    <section class="section" id="ecosystem">
+    <section class="section scroll-reveal" id="ecosystem">
       <div class="section-header">
         <h2>平台服务矩阵</h2>
         <p>与各类专业机构、咨询伙伴、行业协会共同打造共赢生态，为会员提供全流程支撑。</p>
@@ -176,7 +224,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer scroll-reveal">
       <div class="footer-grid">
         <div>
           <h4>多多资源协同平台</h4>
@@ -199,5 +247,68 @@
       </div>
       <p>© 2024 多多合作资源平台. All rights reserved.</p>
     </footer>
+    <script>
+      const scrollElements = document.querySelectorAll('.scroll-reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      scrollElements.forEach((el) => observer.observe(el));
+
+      const galleryTrack = document.getElementById('galleryTrack');
+      const slides = Array.from(galleryTrack.querySelectorAll('.slide'));
+      const dotsContainer = document.getElementById('galleryDots');
+      let currentSlide = 0;
+      let autoplayTimer;
+
+      function createDots() {
+        slides.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.className = 'dot';
+          dot.type = 'button';
+          dot.setAttribute('aria-label', `切换至第 ${index + 1} 张`);
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      function setActiveSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        setActiveSlide(currentSlide);
+        resetAutoplay();
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        setActiveSlide(currentSlide);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(nextSlide, 5000);
+      }
+
+      createDots();
+      setActiveSlide(currentSlide);
+      resetAutoplay();
+    </script>
   </body>
 </html>
