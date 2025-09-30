@@ -410,6 +410,85 @@ nav {
   line-height: 1.7;
 }
 
+.founder-credits {
+  background: linear-gradient(180deg, #f6f8ff 0%, #eef2ff 100%);
+  color: #1d2240;
+  padding: 88px 64px;
+}
+
+.credits-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.credits-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.credits-heading h2 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.credits-heading p {
+  margin: 0;
+  color: #4b5170;
+  line-height: 1.8;
+}
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px 32px;
+}
+
+.credit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 16px 30px rgba(31, 36, 64, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.credit-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.credit-affiliation {
+  color: #5c6280;
+}
+
+@media (max-width: 768px) {
+  .founder-credits {
+    padding: 72px 32px;
+  }
+
+  .credits-grid {
+    gap: 20px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .credits-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .credit-card {
+    padding: 18px 20px;
+  }
+}
+
 .footer {
   background: #130f40;
   color: rgba(255, 255, 255, 0.7);
