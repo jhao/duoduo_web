@@ -607,6 +607,10 @@ body.menu-open {
   content: none;
 }
 
+.topbar::after {
+  content: none;
+}
+
 .topbar-left {
   display: flex;
   flex-direction: column;
