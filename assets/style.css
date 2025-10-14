@@ -506,6 +506,32 @@ nav {
   margin-bottom: 12px;
 }
 
+.footer .icp-info {
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+
+.icp-footer {
+  background: #130f40;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.icp-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.icp-info a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
